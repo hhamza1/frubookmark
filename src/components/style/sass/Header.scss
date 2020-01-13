@@ -1,0 +1,12 @@
+.header {
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    &__right {
+        justify-self: flex-end;
+    }
+
+    &__pd-right {
+        padding-right: 10px;
+    }
+}
