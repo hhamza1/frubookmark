@@ -10,8 +10,8 @@ const CardList = ({bookmarks}) => {
                         <Card key={key} className="card">
                             <CardContent className="card__details">
                                 <ul>
-                                    <li>Bookmark Name : {bookmark.title}</li>
-                                    <li>Bookmarked By : {bookmark.author}</li>
+                                    <li>Bookmark Name : {bookmark.name}</li>
+                                    <li>Bookmarked URL: {bookmark.url}</li>
                                 </ul>
                             </CardContent>
                         </Card>
