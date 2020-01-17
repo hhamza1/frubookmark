@@ -2,3 +2,43 @@
     padding: 10px 10px;
     max-width: 100%;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    padding: 0 5%;
+    background-color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__lnk {
+        padding: 0;
+        color: #fff;
+    }
+}
+
+main {
+    margin-top: 56px;
+    max-height: calc(100vh - 56px);
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: column;
+    margin: 50px auto 0 auto;
+    padding: 1.5rem
+}

@@ -1,7 +1,0 @@
-.header {
-  display: grid;
-  grid-template-columns: 80% 20%; }
-  .header__right {
-    justify-self: flex-end; }
-  .header__pd-right {
-    padding-right: 10px; }
