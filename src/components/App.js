@@ -10,8 +10,10 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/Card';
 import './style/css/App.css';
 
+const imgLink = require("../assets/images/logo.jpg");
+
+
 const App = () => {
-  const imgLink = require("../assets/images/logo.jpg");
   return (
     <Fragment>
       <nav className="navbar">
