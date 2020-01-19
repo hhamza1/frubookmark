@@ -44,3 +44,39 @@ form {
     margin: 50px auto 20px auto;
     padding: 1.5rem
 }
+
+
+.form-field {
+    padding-bottom: 5px;
+}
+
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.bookmark-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13.5px;
+
+}
+
+.bookmark {
+    width: 100%;
+    margin-bottom: 20px;
+    background: #333;
+    a {
+        color: rgb(253, 72, 0);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    &__content {
+        padding: 10px;
+    }
+}
