@@ -1,0 +1,16 @@
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+var firebaseConfig = {
+    apiKey: "AIzaSyAX2gsgDrFLEHVJVOfKAsS8WbsvBhnDang",
+    authDomain: "frubookmark.firebaseapp.com",
+    databaseURL: "https://frubookmark.firebaseio.com",
+    projectId: "frubookmark",
+    storageBucket: "frubookmark.appspot.com",
+    messagingSenderId: "442950820871",
+    appId: "1:442950820871:web:04175ae14947f6902ab6a2"
+  };
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
