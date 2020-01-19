@@ -12,7 +12,6 @@ function useBookmark() {
       .firestore()
       .collection('bookmarks')
       .onSnapshot((snapshot) => {
-        console.log('snapshot',snapshot);
         const newBookmark = snapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data()
