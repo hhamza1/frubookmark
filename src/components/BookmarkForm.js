@@ -1,16 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import firebase from '../firebase';
 
 
-const BookmarkForm = ({setNewBmk, newBmk, dispatchCardSet}) => {
+const BookmarkForm = () => {
+    const [name, setName] = useState('');
+    const [url, setUrl] = useState('');
+
+    function onSubmit(e) {
+      e.preventDefault();
+
+      firebase
+      .firestore()
+      .collection('bookmarks')
+      .add({
+        name,
+        url
+      })
+      .then(() => {
+        setName('')
+        setUrl('')
+        })
+      }
+    
+
+
     return(
-        <form onSubmit={e => e.preventDefault()}>
+        <form>
           <h3 className="formTitle">Frubookmark - Add a bookmark</h3>
             <div className="form-field">
               <TextField
-                value={newBmk.name}
-                onChange={e => setNewBmk({...newBmk, name: e.currentTarget.value})}
+                value={name}
+                onChange={e => setName(e.currentTarget.value)}
                 name="bookmark-name" 
                 label="Bookmark Name" 
                 placeholder="Enter the name here!" 
@@ -18,8 +40,8 @@ const BookmarkForm = ({setNewBmk, newBmk, dispatchCardSet}) => {
             </div>
             <div className="form-field">
               <TextField
-                value={newBmk.url}
-                onChange={e => setNewBmk({...newBmk, url: e.currentTarget.value})}
+                value={url}
+                onChange={e => setUrl(e.currentTarget.value)}
                 name="bookmark-url" 
                 label="Bookmark URL" 
                 placeholder="https://example.com" 
@@ -29,12 +51,11 @@ const BookmarkForm = ({setNewBmk, newBmk, dispatchCardSet}) => {
               <Button variant="outlined" color="secondary">
                 Clear Fields
               </Button>
-              <Button onClick={() => dispatchCardSet(newBmk)} variant="outlined" color="primary">
+              <Button onClick={onSubmit} variant="outlined" color="primary">
                 Add Bookmark
               </Button>
             </div>
         </form>
     );
 }
-
 export default BookmarkForm;
