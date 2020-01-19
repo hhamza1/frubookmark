@@ -3,12 +3,13 @@ import React, {Fragment, useEffect, useState} from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/Card';
 import firebase from '../firebase';
+import './style/css/BookmarkCard.css';
 
 
 function useBookmark() {
   const[bmkData, setBmkData] = useState([]);
   useEffect(() => {
-    firebase
+    const unsubscribe = firebase
       .firestore()
       .collection('bookmarks')
       .onSnapshot((snapshot) => {
@@ -19,6 +20,8 @@ function useBookmark() {
 
         setBmkData(newBookmark);
       });
+
+      return () => unsubscribe();
   }, [])
 
   return bmkData;
@@ -26,6 +29,7 @@ function useBookmark() {
 
 const BookmarkCard = () => {
     const bookmarks = useBookmark();
+
     const mappedData = bookmarks.map((bookmark, index) => {
       if(bookmark){ 
       return(
