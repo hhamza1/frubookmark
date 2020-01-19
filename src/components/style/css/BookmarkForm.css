@@ -1,0 +1,18 @@
+form {
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  flex-direction: column;
+  margin: 50px auto 20px auto;
+  padding: 1.5rem; }
+
+.form-field {
+  padding-bottom: 5px; }
+
+.form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px; }

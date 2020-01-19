@@ -11,51 +11,9 @@ a:hover {
     cursor: pointer;
 }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 56px;
-    padding: 0 5%;
-    background-color: #999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__lnk {
-        padding: 0;
-        color: #fff;
-    }
-}
-
 main {
     margin-top: 56px;
     max-height: calc(100vh - 56px);
-}
-
-form {
-    border-radius : 10px;
-    box-shadow:  1px 1px 3px rgba(0,0,0,.5);
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    flex-direction: column;
-    margin: 50px auto 20px auto;
-    padding: 1.5rem
-}
-
-
-.form-field {
-    padding-bottom: 5px;
-}
-
-
-.form-actions {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 10px;
 }
 
 .bookmark-list {
@@ -64,19 +22,4 @@ form {
     align-items: center;
     padding: 13.5px;
 
-}
-
-.bookmark {
-    width: 100%;
-    margin-bottom: 20px;
-    background: #333;
-    a {
-        color: #3f51b5;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    
-    &__content {
-        padding: 10px;
-    }
 }
