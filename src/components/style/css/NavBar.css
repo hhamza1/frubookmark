@@ -12,3 +12,11 @@
   .navbar__lnk {
     padding: 0;
     color: #fff; }
+  .navbar__title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.MuiSvgIcon-root {
+  color: #fff; }

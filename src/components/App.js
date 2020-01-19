@@ -8,8 +8,6 @@ import './style/css/App.css';
 const imgLink = require("../assets/images/logo.jpg");
 
 
-
-
 const App = () => {
 
   return (
