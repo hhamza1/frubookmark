@@ -1,6 +1,6 @@
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useState, useEffect} from 'react';
+import React, { Fragment } from 'react';
 import BookmarkCard from './BookmarkCard';
 import NavBar from './NavBar';
 import BookmarkForm from './BookmarkForm';
