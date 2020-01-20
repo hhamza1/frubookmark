@@ -21,7 +21,9 @@ const NavBar = ({user, signIn, signOut}) => {
              className="navbar__lnk" 
              href="#" 
              alt="Bookmark">
-          <span className="navbar__title">Welcome</span>
+            <span className="navbar__title">
+              {user ? `Hi ${user.displayName}` : `Welcome`}
+            </span>
           </a>
           <BookmarkIcon />
         </nav>
