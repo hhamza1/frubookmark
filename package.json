@@ -18,8 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "npm install && node-sass src/components/style/sass -o src/components/style/css",
     "sass": "node-sass -w src/components/style/sass -o src/components/style/css"
   },
   "eslintConfig": {
