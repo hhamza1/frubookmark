@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-var firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyAX2gsgDrFLEHVJVOfKAsS8WbsvBhnDang",
     authDomain: "frubookmark.firebaseapp.com",
     databaseURL: "https://frubookmark.firebaseio.com",
@@ -16,6 +16,5 @@ var firebaseConfig = {
     appId: "1:442950820871:web:04175ae14947f6902ab6a2"
   };
 
-firebase.initializeApp(firebaseConfig);
 
 export default firebase;
